@@ -4,9 +4,13 @@ const songsSlice = createSlice({
   name: "song",
   initialState: [],
   reducers: {
-    addSong(state, action) {},
+    addSong(state, action) {
+      state.push(action.payload);
+    },
     removeSong(state, action) {
-      // Placeholder logic for removing a song
+      console.log(`action.payload = ${action.payload}`); // returns correct id
+
+      state.filter((arrow) => arrow.id !== action.payload);
     },
   },
 });
@@ -16,7 +20,6 @@ const store = configureStore({
     songs: songsSlice.reducer,
   },
 });
-
-// Dispatch some actions to test the reducers
-
-console.log(store.getState());
+export { store };
+const { addSong, removeSong } = songsSlice.actions;
+export { addSong, removeSong };

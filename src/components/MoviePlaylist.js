@@ -5,9 +5,7 @@ function MoviePlaylist() {
   // Get list of movies
   const moviePlaylist = [];
 
-  const handleMovieAdd = (movie) => {
-    console.log(movie);
-  };
+  const handleMovieAdd = (movie) => {};
   const handleMovieRemove = (movie) => {
     // To Do:
     // Remove movie from list of movies
