@@ -8,9 +8,8 @@ const songsSlice = createSlice({
       state.push(action.payload);
     },
     removeSong(state, action) {
-      console.log(`action.payload = ${action.payload}`); // returns correct id
-
-      state.filter((arrow) => arrow.id !== action.payload);
+      console.log(`action.payload = ${action.payload}`);
+      state.splice(action.payload, 1); // returns correct id
     },
   },
 });
