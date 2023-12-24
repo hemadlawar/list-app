@@ -36,4 +36,5 @@ const store = configureStore({
 });
 export { store };
 const { addSong, removeSong } = songsSlice.actions;
-export { addSong, removeSong };
+const { addMovie, removeMovie } = movieSlice.actions;
+export { addSong, removeSong, addMovie, removeMovie };
